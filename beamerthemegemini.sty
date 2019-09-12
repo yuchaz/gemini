@@ -41,6 +41,14 @@
 \newcommand{\samelineand}{\qquad}
 
 % ====================
+% Logos
+% ====================
+\newcommand\setleftlogo[1]{\def\leftlogo{#1}}
+\newcommand\setrightlogo[1]{\def\rightlogo{#1}}
+\setleftlogo{}
+\setrightlogo{}
+
+% ====================
 % Elements
 % ====================
 
@@ -72,9 +80,13 @@
 \setbeamertemplate{caption label separator}[period]
 \setlength{\abovecaptionskip}{2ex}
 \setlength{\belowcaptionskip}{1ex}
+\setbeamerfont{caption name}{series=\bfseries}
 
 % Bibliography
 \setbeamertemplate{bibliography item}[text]
+\setbeamertemplate{bibliography entry title}{}
+\setbeamertemplate{bibliography entry location}{}
+\setbeamertemplate{bibliography entry note}{}
 
 % Navigation
 \beamertemplatenavigationsymbolsempty
@@ -95,7 +107,12 @@
 {
   \begin{beamercolorbox}{headline}
     \begin{columns}
-      \begin{column}{\paperwidth}
+	  \begin{column}{.2\paperwidth}
+	  	\flushleft
+	  	\leftlogo
+	  \end{column}
+
+      \begin{column}{.6\paperwidth}
         \usebeamerfont{headline}
         \vskip3ex
         \centering
@@ -103,6 +120,11 @@
         {\usebeamerfont{headline author}\usebeamercolor[fg]{headline author}\insertauthor\\[1ex]}
         {\usebeamerfont{headline institute}\usebeamercolor[fg]{headline institute}\insertinstitute\\[1ex]}
       \end{column}
+
+	  \begin{column}{.2\paperwidth}
+	    \flushright
+	    \rightlogo
+	  \end{column}
     \end{columns}
     \vspace{5ex}
     \ifbeamercolorempty[bg]{headline rule}{}{

@@ -1,0 +1,79 @@
+% ====================
+% Packages
+% ====================
+\usepackage[T1]{fontenc}
+\usepackage{lmodern}
+\usepackage[size=custom,width=120,height=90,scale=1.0]{beamerposter}
+\usetheme{gemini}
+\usecolortheme{uw}
+\usepackage{graphicx}
+\usepackage{booktabs}
+\usepackage{tikz}
+\usepackage{pgfplots}
+\usepackage{fontawesome}
+\usepackage{bm}
+% \usepackage[linesnumbered,ruled]{algorithm2e}
+\usepackage[ruled]{algorithm2e}
+\usepackage{subfig}
+\usepackage{wrapfig}
+\usepackage{setspace}
+
+% ====================
+% Lengths
+% ====================
+
+% If you have N columns, choose \sepwidth and \colwidth such that
+% (N+1)*\sepwidth + N*\colwidth = \paperwidth
+\newlength{\sepwidth}
+\newlength{\colwidth}
+\setlength{\sepwidth}{0.025\paperwidth}
+\setlength{\colwidth}{0.3\paperwidth}
+
+\newcommand{\separatorcolumn}{\begin{column}{\sepwidth}\end{column}}
+
+
+% ===========================
+% Title, authors and logos
+% ===========================
+
+\title{Some fancy title: followed by some more text}
+
+\author{Yu-Chia Chen \inst{1} \and Ben Bitdiddle \inst{2} \and Lem E. Tweakit \inst{2}}
+
+\institute[shortinst]{\inst{1} University of Washington \,\faEnvelopeO\, \href{mailto:yuchaz@uw.edu}{\texttt{yuchaz@uw.edu}} \samelineand \inst{2} Some institute \,\faEnvelopeO\, \texttt{\{\href{mailto:name1@place.holder}{ben}, \href{mailto:name2@place.holder}{lem}\}@place.holder}}
+
+\setleftlogo{
+	\vspace{3ex}
+	\hspace{3em}
+	\includegraphics[width=.85\linewidth]{figs/uwecelogo}
+}
+
+\setrightlogo{
+	\vspace{3ex}
+	\includegraphics[width=.55\linewidth]{figs/uw_stacked_white}
+	\hspace{3em}
+	% Please change the right logo
+}
+
+
+% ====================
+% Math
+% ====================
+% Math commands
+\newcommand{\vect}[1]{\mathbf{\bm{#1}}}
+\DeclareMathOperator*{\argmax}{arg\,max}
+\DeclareMathOperator*{\argmin}{arg\,min}
+\newcommand{\prob}{\text{Pr}}
+\newcommand{\inv}[1]{\frac{1}{#1}}
+
+% Dataset names
+\newcommand{\synthdata}{\texttt{Synth8000}}
+\newcommand{\mitdata}{\texttt{MITReal}}
+\newcommand{\mathdata}{\texttt{MathO}}
+\newcommand{\enrondata}{\texttt{EnronMail}}
+\newcommand{\csynthjump}{\texttt{Synth8000Jump}}
+\newcommand{\csynthdrift}{\texttt{Synth8000Drift}}
+\newcommand{\cmitdata}{\texttt{MITRealFall}}
+
+% Typesetting commands
+\newcommand{\paragraph}[1]{\textbf{#1}\quad}

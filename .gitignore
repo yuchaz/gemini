@@ -1,5 +1,7 @@
 # output
-*.pdf
+poster.pdf
+.DS_Store
+.texpadtmp/
 
 # intermediate files
 *.aux
